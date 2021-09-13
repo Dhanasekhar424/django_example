@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="{% static 'images/css/style.css' %}">
+        <style>
+       ul {
+        list-style-type: none;
+
+        margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  background-color:indigo;
+  font-size: 20px;
+  word-spacing: 30px;
+}
+
+li {
+  float: left;
+  word-spacing: 30px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color:greenyellow;
+}
+
+        </style>
+    </head>
+    <body>
+        <ul>
+        
+        
+       <li><a href="{% url 'login_app:index' %}">index</a></li> 
+       <li><a href="{% url 'login_app:login' %}">login</a></li> 
+       <li><a href="{% url  'login_app:register' %}">register</a></li>
+        </ul>
+    </body>
+</html>

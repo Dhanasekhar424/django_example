@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>learning users</title>
+        <link rel="stylesheet" href="{% static 'images/css/style.css' %}">
+        
+    </head>
+    <body>
+        <h1>authentication  example</h1>
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">logout</a>
+        {% else %}
+        <a href="{% url 'login_app:login' %}">login</a>
+        {% endif %}
+        <div>
+        {% block body_block %}
+        {% endblock %}
+        </div>
+        
+    </body>
+</html>
